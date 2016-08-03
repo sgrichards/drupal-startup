@@ -19,4 +19,5 @@ This is a [Composer](https://getcomposer.org/) based Drupal 8 startup project th
 
 ## Build me...
 
-Run  `composer install`
+Run  `composer create-project sgrichards/drupal-startup:dev-master drupal-startup --no-interaction`
+
