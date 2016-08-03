@@ -1,0 +1,76 @@
+{
+    "name": "sgrichards/drupal-startup",
+    "description": "Startup template for Drupal 8 projects.",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "behat/behat": "^3.1",
+        "drupal/drupal-extension": "^3.1",
+        "behat/mink": "~1.6",
+        "behat/mink-goutte-driver": "~1.2",
+        "jcalderonzumba/gastonjs": "~1.0.2",
+        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+        "mikey179/vfsStream": "~1.2",
+        "phpunit/phpunit": "~4.8",
+        "symfony/css-selector": "2.7.*",
+        "drupal/coder": "dev-8.x-2.x",
+        "squizlabs/php_codesniffer": "^2.6",
+        "sgrichards/docker-drupal-stack": "*"
+    },
+    "require": {
+        "composer/installers": "^1.0",
+        "mnsami/composer-custom-directory-installer": "1.1.*",
+        "drupal-composer/drupal-scaffold": "^2.0.0",
+        "cweagans/composer-patches": "1.5.0",
+        "drupal/lightning": "^8.1.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.drupal-composer.org"
+        }
+    ],
+    "scripts": {
+      "post-install-cmd": [
+        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "Acquia\\Lightning\\ScriptHandler::deployLibraries"
+      ],
+      "post-update-cmd": [
+        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "Acquia\\Lightning\\ScriptHandler::deployLibraries"
+      ]
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "autoload": {
+        "classmap": [
+          "scripts/ScriptHandler.php"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "docroot/core": [
+                "drupal/core"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "./docker/": [
+                "sgrichards/docker-drupal-stack"
+            ]
+        },
+        "enable-patching": true
+    }
+}

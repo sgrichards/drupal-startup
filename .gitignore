@@ -1,0 +1,17 @@
+# Ignore binaries.
+/bin
+
+# Docker.
+/docker
+
+# Ignore Drupal-managed dependencies.
+/docroot
+
+# Ignore Composer-managed dependencies.
+vendor/
+
+# Ignore lock file.
+/composer.lock
+
+# System.
+.idea
