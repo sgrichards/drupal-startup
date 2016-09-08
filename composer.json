@@ -24,7 +24,7 @@
         "mnsami/composer-custom-directory-installer": "1.1.*",
         "drupal-composer/drupal-scaffold": "^2.0.0",
         "cweagans/composer-patches": "1.5.0",
-        "drupal/lightning": "^8.1.0"
+        "drupal/lightning": "^8.1.1"
     },
     "repositories": [
         {
