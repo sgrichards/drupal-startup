@@ -10,14 +10,29 @@
 
 # Drupal 8 and Docker flavoured project startup
 
-This is a [Composer](https://getcomposer.org/) based Drupal 8 startup project that utilises the [Lightning](https://www.drupal.org/project/lightning) distribution and a [Docker based local development stack](https://hub.docker.com/r/steverichards/drupal-apache-php56).
+This is a [Composer](https://getcomposer.org/) based Drupal 8 startup project that utilises docker.
+
+Stack:
+
+- PHP 7.1 (w/ Xdebug)
+- Apache
+- Solr 4
+- MariaDB
+- Redis
 
 ## Requirements
 
-- composer 
-- node _(required for lighting profile scripts)_ 
+- docker-for-mac
+- docker-compose
 
 ## Build me...
 
-Run  `composer create-project sgrichards/drupal-startup:dev-master drupal-startup --no-interaction`
+```
+docker-compose up -d
+```
 
+## Access points
+
+- [Web](http://localhost:8080/)
+- [Solr](http://localhost:8983/solr)
+- [Redis Commander](http://localhost:8081)

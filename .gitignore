@@ -1,17 +1,15 @@
 # Ignore binaries.
-/bin
-
-# Docker.
-/docker
+bin
 
 # Ignore Drupal-managed dependencies.
-/docroot
+docroot
+src/sites/*/settings.local.php
 
 # Ignore Composer-managed dependencies.
 vendor/
 
 # Ignore lock file.
-/composer.lock
+composer.lock
 
 # System.
 .idea

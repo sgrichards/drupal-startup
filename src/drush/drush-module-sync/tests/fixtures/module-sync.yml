@@ -1,0 +1,15 @@
+version: 1
+scope:
+  stage:
+    extend_base: true
+    modules:
+      - file_stage_proxy
+  local:
+    extend_base: true
+    modules:
+      - devel
+base:
+  - field
+  - views
+exclude_types:
+  - profile

@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+
+  web:
+    build: ./docker/web
+    links:
+      - database
+      - redis
+      - solr
+    environment:
+      DB_NAME: drupal8
+      DB_USER: drupal8
+      DB_PASSWORD: drupal8
+      DB_HOST: database
+      DB_PORT: 3306
+      DRUPAL_HASH_SALT: sosecret
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app:cached
+      - /app/docroot/sites/default/files
+
+  database:
+    image: mariadb:10.2
+    environment:
+      MYSQL_ROOT_PASSWORD: 53gaKKbCHBN9VPrp
+      MYSQL_DATABASE: drupal8
+      MYSQL_USER: drupal8
+      MYSQL_PASSWORD: drupal8
+    expose:
+      - 3396
+    ports:
+      - "3307:3306"
+
+  solr:
+    build: ./docker/solr
+    expose:
+      - 8983
+    ports:
+      - "8983:8983"
+
+  redis:
+    image: redis:3.2-alpine
+    expose:
+      - 6379
+    ports:
+      - "6379:6379"
+
+  rediscommander:
+    image: rediscommander/redis-commander:latest
+    restart: always
+    links:
+      - redis
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8081:8081"
