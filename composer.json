@@ -17,7 +17,7 @@
     },
     "drush-module-sync": {
       "type": "path",
-      "url": "drush-module-sync"
+      "url": "src/drush/drush-module-sync"
     }
   },
   "require-dev": {
