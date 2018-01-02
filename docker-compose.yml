@@ -28,22 +28,16 @@ services:
       MYSQL_DATABASE: drupal8
       MYSQL_USER: drupal8
       MYSQL_PASSWORD: drupal8
-    expose:
-      - 3396
     ports:
       - "3307:3306"
 
   solr:
     build: ./docker/solr
-    expose:
-      - 8983
     ports:
       - "8983:8983"
 
   redis:
     image: redis:3.2-alpine
-    expose:
-      - 6379
     ports:
       - "6379:6379"
 

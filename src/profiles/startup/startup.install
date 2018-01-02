@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the arsenal installation profile.
+ */
+
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function startup_install() {
+
+  // Assign user 1 the "administrator" role.
+  $user = User::load(1);
+  $user->roles[] = 'administrator';
+  $user->save();
+
+  // We install some menu links, so we have to rebuild the router, to ensure the
+  // menu links are valid.
+  \Drupal::service('router.builder')->rebuildIfNeeded();
+
+  // Enable the admin theme.
+  \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+
+  // Set default timezone and country.
+  $system_date = \Drupal::configFactory()->getEditable('system.date');
+  $system_date->set('timezone.default', 'UTC');
+  $system_date->set('country.default', 'GB');
+  $system_date->save(TRUE);
+
+  // Set front page to "home".
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/home')->save(TRUE);
+
+}

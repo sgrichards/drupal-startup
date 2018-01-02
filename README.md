@@ -23,12 +23,11 @@ Stack:
 ## Requirements
 
 - docker-for-mac
-- docker-compose
 
 ## Build me...
 
 ```
-docker-compose up -d
+make start
 ```
 
 ## Access points

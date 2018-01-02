@@ -4,6 +4,7 @@ bin
 # Ignore Drupal-managed dependencies.
 docroot
 src/sites/*/settings.local.php
+src/sites/*/files
 
 # Ignore Composer-managed dependencies.
 vendor/

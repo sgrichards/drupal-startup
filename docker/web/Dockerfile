@@ -52,6 +52,8 @@ RUN composer global require hirak/prestissimo --no-interaction
 # Configure Apache.
 
 ENV APACHE_DOCUMENT_ROOT /app/docroot
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
  && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf \

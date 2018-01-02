@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="startup">
+  <description>PHP CodeSniffer configuration for Startup.</description>
+  <file>./src</file>
+  <arg name="extensions" value="inc,install,module,php,profile,test,theme,yml"/>
+
+  <!--Exclude system & theme code.-->
+  <exclude-pattern>./src/sites/*</exclude-pattern>
+  <exclude-pattern>./src/themes/*\.(?!theme$)</exclude-pattern>
+
+  <!--Blacklist of coding standard rules that are not yet fixed. Ref. https://www.drupal.org/node/2571965-->
+  <rule ref="vendor/drupal/coder/coder_sniffer/Drupal">
+    <!-- There is a bug in coder for class variable names: https://www.drupal.org/node/2665462 -->
+    <exclude name="Drupal.NamingConventions.ValidVariableName"/>
+    <exclude name="Drupal.InfoFiles.AutoAddedKeys.Version"/>
+    <exclude name="Drupal.InfoFiles.AutoAddedKeys.Project"/>
+    <exclude name="Drupal.Classes.UnusedUseStatement.UnusedUse"/>
+  </rule>
+</ruleset>
