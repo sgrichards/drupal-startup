@@ -1,5 +1,5 @@
 # Drupal 8 recipe
-name: test-dev
+name: drupal8-starup
 
 # Start with the default Drupal 8 recipe
 recipe: drupal8
