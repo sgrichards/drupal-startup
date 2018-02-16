@@ -1,0 +1,42 @@
+# Drupal 8 recipe
+name: test-dev
+
+# Start with the default Drupal 8 recipe
+recipe: drupal8
+
+# Configure the Drupal8 recipe
+config:
+
+  php: '7.1'
+
+  via: nginx
+
+  webroot: docroot
+
+  drush: composer
+
+  database: mariadb:10.1
+
+  xdebug: true
+
+# Service overrides and augments
+# See: https://docs.devwithlando.io/config/services.html
+services:
+
+  cache:
+    type: redis
+    persist: true
+
+  # Add an indexing backend
+  # See: https://docs.devwithlando.io/services/solr.html
+  search:
+    type: solr:4.10
+    config:
+      conf: conf/solr4
+
+  # Add mailhog capturing
+  # See: https://docs.devwithlando.io/services/mailhog.html
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
