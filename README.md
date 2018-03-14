@@ -8,30 +8,27 @@
 ########################################
 ```
 
-# Drupal 8 and Docker flavoured project startup
+# Drupal 8 / Lando flavoured project startup
 
-This is a [Composer](https://getcomposer.org/) based Drupal 8 startup project that utilises docker.
+Development Environment
+----------------------
 
-Stack:
+### Prerequisites
 
-- PHP 7.1 (w/ Xdebug)
-- Apache
-- Solr 4
-- MariaDB
-- Redis
+1. Install [Lando](https://docs.devwithlando.io/installation/installing.html).
 
-## Requirements
+### Setup
 
-- docker-for-mac
+Run `lando start` from within the project directory
 
-## Build me...
+### Tooling
 
-```
-make start
-```
+*Install/Reinstall* (install drupal site) - `lando install`
 
-## Access points
+*Reset* (remove generated code) - `lando reset` 
 
-- [Web](http://localhost:8080/)
-- [Solr](http://localhost:8983/solr)
-- [Redis Commander](http://localhost:8081)
+*composer* - `lando composer {install}, {require} etc.`
+
+*drush* - `lando drush {cr}, {site-install} etc.`
+
+Further lando related commands see: https://docs.devwithlando.io/config/tooling.html

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ruleset name="Startup">
+  <description>Drupal Coding Standards</description>
+
+  <file>./src/modules</file>
+  <file>./src/themes</file>
+  <file>./src/profiles</file>
+  <arg name="extensions" value="inc,install,module,php,profile,test,theme,yml"/>
+
+  <!--Exclude third party code.-->
+  <exclude-pattern>./src/sites/*</exclude-pattern>
+  <exclude-pattern>./src/themes/*\.(?!theme$)</exclude-pattern>
+
+  <arg name="colors" />
+  <arg value="np"/>
+
+  <!-- Use Drupal rules -->
+  <rule ref="./vendor/drupal/coder/coder_sniffer/Drupal"/>
+
+  <!-- 
+  Don't enforce class / method comments - in PHP7.x we have return
+  types, and lots of classes and methods are self expanatory. Comments
+
+  should only be added in the rare cases where they add value (code should
+  be self-expanatory, e.g. extract code into methods).
+  -->
+  <rule ref="Drupal.Commenting.ClassComment.Missing">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Drupal.Commenting.ClassComment.Missing">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Drupal.Commenting.FunctionComment.Missing">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Drupal.Commenting.DocComment.MissingShort">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Drupal.Commenting.FunctionComment.MissingParamComment">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Drupal.Commenting.FunctionComment.MissingReturnComment">
+    <severity>0</severity>
+  </rule>
+
+  <!-- 
+  Annotations should be imported, not expanded 
+  -->
+  <rule ref="Drupal.Commenting.DataTypeNamespace.DataTypeNamespace">
+    <severity>0</severity>
+  </rule>
+
+</ruleset>
