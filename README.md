@@ -8,6 +8,8 @@
 ########################################
 ```
 
+[![Build Status](https://travis-ci.org/sgrichards/drupal-startup.svg?branch=develop)](https://travis-ci.org/sgrichards/drupal-startup)
+
 # Drupal 8 / Lando flavoured project startup
 
 Development Environment
