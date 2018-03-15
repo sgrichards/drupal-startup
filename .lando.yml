@@ -1,4 +1,4 @@
-name: drupal8-starup
+name: drupal8-startup
 
 # Configure the Drupal8 recipe
 recipe: drupal8
@@ -45,6 +45,8 @@ services:
 proxy:
   mailhog:
     - mail.startup.lndo.site
+  nginx:
+    - www.startup.lndo.site
 
 # Development tools
 tooling:
@@ -68,27 +70,7 @@ tooling:
     service: appserver
     cmd: ./bin/drupal database:restore --file=../assets/post-install.sql
 
-  integrate:
-    description: Run all the CI scripts
+  test:
+    description: Run all tests
     service: appserver
-    cmd: ./scripts/development/integrate.sh
-
-  behat:
-    description: Run Behat
-    service: appserver
-    cmd: ./bin/behat
-
-  phpunit:
-    description: Run PHPUnit
-    service: appserver
-    cmd: ./bin/phpunit
-
-  phpcs:
-    description: Run PHP Code Sniffer
-    service: appserver
-    cmd: ./bin/phpcs
-
-  phpcbf:
-    description: Run PHP Code Beautifier and Fixer (automatically fix CS)
-    service: appserver
-    cmd: ./bin/phpcs
+    cmd: ./scripts/development/tests.sh

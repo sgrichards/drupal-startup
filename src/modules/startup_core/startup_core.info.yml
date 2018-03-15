@@ -1,5 +1,0 @@
-name: Startup Core
-description: 'Base module for global mods and tests.'
-type: module
-core: 8.x
-package: Startup

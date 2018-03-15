@@ -28,4 +28,3 @@ function clean {
     rm $REFERENCE_DUMP_FILE
   fi
 }
-

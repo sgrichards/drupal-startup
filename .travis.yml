@@ -1,0 +1,21 @@
+language: php
+php:
+  - '7.1'
+
+services:
+  - docker
+
+before_install:
+  - sudo apt-get -y update
+  - sudo apt-get -y install cgroup-bin curl
+  - curl -fsSL -o /tmp/lando-latest.deb http://installer.lando.io/lando-latest-dev.deb
+  - sudo dpkg -i /tmp/lando-latest.deb
+  - lando version
+
+script:
+
+  # start, build & install in verbose mode
+  - lando start -- -v
+
+  # Run test suite in verbose mode
+  - lando test -- -v
