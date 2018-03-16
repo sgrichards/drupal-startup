@@ -32,17 +32,16 @@
     "phpunit/phpunit": "^6.0"
   },
   "require": {
-    "hirak/prestissimo": "^0.3",
     "cweagans/composer-patches": "^1.5.0",
     "composer/installers": "^1.0",
     "oomphinc/composer-installers-extender": "^1.1",
+    "mikey179/vfsStream": "~1.2",
     "drupal-composer/drupal-scaffold": "^2.0.0",
     "drupal/console": "1.0.1",
     "drush/drush": "^8.1",
     "kporras07/composer-symlinks": "^0.1.0@dev",
     "sgrichards/drush-module-sync": "*",
-    "sgrichards/drupal-startup-profile": "^0.1",
-    "mikey179/vfsStream": "~1.2"
+    "sgrichards/drupal-startup-profile": "^0.1"
   },
   "scripts": {
     "post-install-cmd": [
