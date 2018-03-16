@@ -19,9 +19,6 @@ before_install:
   # turn off XDebug
   - phpenv config-rm xdebug.ini || return 0
 
-  # Composer: boost installation
-  - lando composer global show hirak/prestissimo -q || travis_retry lando composer global require $DEFAULT_COMPOSER_FLAGS hirak/prestissimo
-
   # Install Lando.
   - sudo apt-get -y update
   - sudo apt-get -y install cgroup-bin curl
@@ -30,6 +27,9 @@ before_install:
 
   # Sanity check to make sure we are rolling.
   - lando version
+
+    # Composer: boost installation
+    - lando composer global show hirak/prestissimo -q || travis_retry lando composer global require $DEFAULT_COMPOSER_FLAGS hirak/prestissimo
 
 script:
 
