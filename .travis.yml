@@ -3,15 +3,6 @@ language: php
 php:
   - '7.1'
 
-cache:
-  directories:
-    - $HOME/.composer
-
-env:
-  global:
-      - DEFAULT_COMPOSER_FLAGS="--no-interaction --no-progress"
-      - COMPOSER_FLAGS=""
-
 services:
   - docker
 
@@ -27,9 +18,6 @@ before_install:
 
   # Sanity check to make sure we are rolling.
   - lando version
-
-    # Composer: boost installation
-    - lando composer global show hirak/prestissimo -q || travis_retry lando composer global require $DEFAULT_COMPOSER_FLAGS hirak/prestissimo
 
 script:
 
