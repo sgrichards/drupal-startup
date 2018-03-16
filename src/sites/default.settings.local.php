@@ -129,3 +129,16 @@ $settings['rebuild_access'] = TRUE;
  * directory.
  */
 $settings['skip_permissions_hardening'] = TRUE;
+
+$settings['hash_salt'] = '3HOkLSwDiQFOtlxXkHUEDjQH3Ch29pmGQ2IJ6NEP_Uayxv0opcsM6ItUfM216qaeT9uMZBVe-A';
+
+$databases['default']['default'] = [
+  'database' => getenv('MYSQL_DATABASE') ?: 'drupal8',
+  'username' => getenv('MYSQL_USER') ?: 'drupal8',
+  'password' => getenv('MYSQL_PASSWORD') ?: 'drupal8',
+  'prefix' => '',
+  'host' => getenv('MYSQL_HOST') ?: 'database',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+];

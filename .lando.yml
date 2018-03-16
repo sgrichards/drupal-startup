@@ -70,6 +70,21 @@ tooling:
     service: appserver
     cmd: ./bin/drupal database:restore --file=../assets/post-install.sql
 
+  phpcs:
+    description: Run PHP Code Sniffer
+    service: appserver
+    cmd: ./bin/phpcs
+
+  phpunit:
+    description: Run PHPUnit
+    service: appserver
+    cmd: ./bin/phpunit
+
+  behat:
+    description: Run Behat
+    service: appserver
+    cmd: ./bin/behat
+
   test:
     description: Run all tests
     service: appserver

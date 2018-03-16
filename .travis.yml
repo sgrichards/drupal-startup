@@ -36,5 +36,13 @@ script:
   # start, build & install in verbose mode
   - lando start -- -v
 
-  # Run test suite in verbose mode
-  - lando test -- -v
+  # Run Coding style.
+  - ./bin/phpcs
+
+  # Run Unit/Kernel tests.
+  - ./bin/phpunit
+
+
+  # TODO: retrieve sanitized db snapshot / install w/ default content.
+  # Integration tests
+  # - ./bin/behat

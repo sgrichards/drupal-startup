@@ -41,7 +41,8 @@
     "drush/drush": "^8.1",
     "kporras07/composer-symlinks": "^0.1.0@dev",
     "sgrichards/drush-module-sync": "*",
-    "sgrichards/drupal-startup-profile": "^0.1"
+    "sgrichards/drupal-startup-profile": "^0.1",
+    "mikey179/vfsStream": "~1.2"
   },
   "scripts": {
     "post-install-cmd": [

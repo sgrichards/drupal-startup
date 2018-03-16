@@ -9,7 +9,7 @@ clean
 
 # Copy the settings.local.php to the default site if it doesn't exist already.
 if [ ! -f "docroot/sites/default/settings.local.php" ]; then
-  run_command "Installing default config" "cp docroot/sites/example.settings.local.php docroot/sites/default/settings.local.php"
+  run_command "Installing default config" "cp docroot/sites/default.settings.local.php docroot/sites/default/settings.local.php"
 fi
 
 run_command "Install Site." "./bin/drush -r $ROOT site-install --account-pass=admin $PROFILE -y -v"
