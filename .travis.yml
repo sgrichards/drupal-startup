@@ -20,20 +20,20 @@ before_install:
   - phpenv config-rm xdebug.ini || return 0
 
   # Composer: boost installation
-  - composer global show hirak/prestissimo -q || travis_retry composer global require $DEFAULT_COMPOSER_FLAGS hirak/prestissimo
+  - lando composer global show hirak/prestissimo -q || travis_retry lando composer global require $DEFAULT_COMPOSER_FLAGS hirak/prestissimo
 
-  # Install Lando
+  # Install Lando.
   - sudo apt-get -y update
   - sudo apt-get -y install cgroup-bin curl
   - curl -fsSL -o /tmp/lando.deb https://github.com/lando/lando/releases/download/v3.0.0-beta.35/lando-v3.0.0-beta.35.deb
   - sudo dpkg -i /tmp/lando.deb
 
-  # Sanity check to make sure we are rolling
+  # Sanity check to make sure we are rolling.
   - lando version
 
 script:
 
-  # start, build & install in verbose mode
+  # Start & build.
   - lando start -- -v
 
   # Run Coding style.
@@ -42,7 +42,9 @@ script:
   # Run Unit/Kernel tests.
   - ./bin/phpunit
 
-
+  # Install site.
   # TODO: retrieve sanitized db snapshot / install w/ default content.
+  - lando install -- -v
+
   # Integration tests
   # - ./bin/behat

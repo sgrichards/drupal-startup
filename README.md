@@ -25,12 +25,16 @@ Run `lando start` from within the project directory
 
 ### Tooling
 
-*Install/Reinstall* (install drupal site) - `lando install`
+**Install/Reinstall** (install drupal site) - `lando install`
 
-*Reset* (remove generated code) - `lando reset` 
+**Reset** (remove generated code) - `lando reset` 
 
-*composer* - `lando composer {install}, {require} etc.`
+**composer** - `lando composer {install}, {require} etc.`
 
-*drush* - `lando drush {cr}, {site-install} etc.`
+**drush** - `lando drush {cr}, {site-install} etc.`
+
+**phpcs** - `lando phpcs` - _see ./phpcs.xml.dist for scope_
+
+**phpunit** - `lando phpunit` - _see ./phpunit.xml.dist for scope_
 
 Further lando related commands see: https://docs.devwithlando.io/config/tooling.html
