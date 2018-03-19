@@ -83,7 +83,10 @@ tooling:
   behat:
     description: Run Behat
     service: appserver
-    cmd: ./bin/behat
+    cmd:
+      - ./bin/behat
+      - -vv
+      - --config=test/behat/behat.yml
 
   test:
     description: Run all tests

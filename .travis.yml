@@ -35,4 +35,4 @@ script:
   - lando install -- -v
 
   # Integration tests
-  # - ./bin/behat
+  - lando behat

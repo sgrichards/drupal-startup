@@ -17,24 +17,24 @@ Development Environment
 
 ### Prerequisites
 
-1. Install [Lando](https://docs.devwithlando.io/installation/installing.html).
+1. Install Docker-for-mac
+2. Install [Lando](https://docs.devwithlando.io/installation/installing.html).
 
 ### Setup
 
-Run `lando start` from within the project directory
+Run `lando start` from within the project directory.
 
 ### Tooling
 
-**Install/Reinstall** (install drupal site) - `lando install`
+| Command                                       | Description                                             |
+|---                                            |---                                                      |
+|`lando install`                                |Install Drupal site                                      |
+|`lando reset`                                  |Reset codebase removing generated code                   |
+|`lando composer {install}, {require} etc.`     |Run composer commands in the appserver container         |
+|`lando drush {cr}, {site-install} etc.`        |Run drush commands in the appserver container            |
+|`lando phpcs`                                  |Run code style analysis _see ./phpcs.xml.dist for scope_ |
+|`lando phpunit`                                |Run phpunit tests _see ./phpunit.xml.dist for scope_     |
+|`lando behat`                                  |Run behat test suite                                     |
+|`lando test`                                   |Run all tests and code evaluation                        |
 
-**Reset** (remove generated code) - `lando reset` 
-
-**composer** - `lando composer {install}, {require} etc.`
-
-**drush** - `lando drush {cr}, {site-install} etc.`
-
-**phpcs** - `lando phpcs` - _see ./phpcs.xml.dist for scope_
-
-**phpunit** - `lando phpunit` - _see ./phpunit.xml.dist for scope_
-
-Further lando related commands see: https://docs.devwithlando.io/config/tooling.html
+For further lando related commands see: https://docs.devwithlando.io/config/tooling.html
