@@ -9,6 +9,7 @@ SCOPE=dev
 ROOT=docroot
 PROFILE=startup
 UUID=410f6390-c5ff-483c-8ff7-99a373139af5
+DRUSH_GLOBALS="-r $ROOT -v"
 
 function run_command {
   TITLE=$1
