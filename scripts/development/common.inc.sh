@@ -3,8 +3,8 @@
 # Exit on failure
 # set -e
 
-REFERENCE_DUMP_FILE="assets/post-import.sql"
 ASSETSDIR=assets
+REFERENCE_DUMP_FILE="$ASSETSDIR/post-import.sql"
 SCOPE=dev
 ROOT=docroot
 PROFILE=startup
