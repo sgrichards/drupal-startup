@@ -52,7 +52,7 @@ tooling:
   install:
     descripion: Install/Re-install Site
     service: appserver
-    cmd: ./scripts/development/install.sh
+    cmd: ./scripts/install.sh
 
   refresh:
     descripion: Refresh (composer install, reload config, clear cache, etc.)

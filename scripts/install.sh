@@ -3,7 +3,7 @@
 # Exit on failure
 set -e
 
-source $(dirname "$0")/../common.inc.sh
+source $(dirname "$0")/common.inc.sh
 
 # Copy the settings.local.php to the default site if it doesn't exist already.
 if [ ! -f "$ENV_DOCROOT/sites/default/settings.local.php" ]; then
