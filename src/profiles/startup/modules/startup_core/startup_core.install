@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Install file.
+ */
+
+use Droath\ModuleSync\ModuleSync;
+use Droath\ModuleSync\SyncConfig;
+
+/**
+ * Implements hook_install().
+ */
+function startup_core_install() {
+  $instance = new ModuleSync(
+    new SyncConfig(),
+    \Drupal::service('module_handler'),
+    \Drupal::service('module_installer')
+  );
+
+  $scope = 'dev';
+  try {
+    $instance->setScope($scope);
+    $install_modules = $instance->listInstalls();
+
+    if (!empty($install_modules)) {
+      $instance->confirmInstall();
+    }
+
+    $uninstall_modules = $instance->listUninstalls();
+
+    if (!empty($uninstall_modules)) {
+      $instance->confirmUninstall();
+    }
+    $instance->execute();
+  }
+  catch (\Exception $e) {
+    \Drupal::logger('module_sync')->log('error', $e->getMessage());
+  }
+}
