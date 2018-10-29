@@ -1,20 +1,16 @@
 #!/bin/bash
 
 # Exit on failure
-# set -e
+set -e
 
-source $(dirname "$0")/common.inc.sh
-
-clean
+source $(dirname "$0")/../common.inc.sh
 
 # Copy the settings.local.php to the default site if it doesn't exist already.
-if [ ! -f "$ROOT/sites/default/settings.local.php" ]; then
-  run_command "Installing default config" "cp $ROOT/sites/default.settings.local.php $ROOT/sites/default/settings.local.php"
+if [ ! -f "$ENV_DOCROOT/sites/default/settings.local.php" ]; then
+  run_command "Installing default config" "cp $ENV_DOCROOT/sites/default.settings.local.php $ENV_DOCROOT/sites/default/settings.local.php"
 fi
 
-run_command "Install Site." "./bin/drush site-install --account-pass=admin $PROFILE $DRUSH_GLOBALS -y"
-run_command "Resetting the site UUID." "./bin/drush config-set system.site uuid $UUID $DRUSH_GLOBALS -y"
-run_command "Clearing the cache." "./bin/drush cr $DRUSH_GLOBALS"
-run_command "Creating reference database dump" "./bin/drush $DRUSH_GLOBALS sql-dump --result-file=../$ASSETSDIR/post-install.sql"
+run_command "Install Site." "./bin/drush site-install --account-pass=admin install_configure_form.enable_update_status_module=NULL $ENV_PROFILE $ENV_DRUSH_GLOBALS -y"
+run_command "Clearing the cache." "./bin/drush cr $ENV_DRUSH_GLOBALS"
 
 echo "Setup complete."

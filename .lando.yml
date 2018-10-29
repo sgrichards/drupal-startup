@@ -16,8 +16,7 @@ services:
 
   appserver:
     build:
-      - "echo wait for database && sleep 15"
-      - "cd $LANDO_MOUNT && composer install && composer run-script links"
+      - cd $LANDO_MOUNT && composer install && composer run-script links
 
 #  cache:
 #    type: memcached
@@ -64,11 +63,6 @@ tooling:
     description: Reset repo (remove generated files).
     service: appserver
     cmd: ./scripts/development/reset.sh
-
-  restoredb:
-    descripion: Restore the post-install database state
-    service: appserver
-    cmd: ./bin/drupal database:restore --file=../assets/post-install.sql
 
   phpcs:
     description: Run PHP Code Sniffer
