@@ -22,7 +22,8 @@
     }
   },
   "require-dev": {
-    "webflo/drupal-core-require-dev": "8.6.2"
+    "webflo/drupal-core-require-dev": "8.6.2",
+    "drupal/devel": "^1.2"
   },
   "require": {
     "cweagans/composer-patches": "^1.5.0",
