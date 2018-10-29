@@ -32,7 +32,7 @@ services:
 #  search:
 #    type: solr:4.10
 #    config:
-#      conf: conf/solr4
+#      conf: conf/solr/solr-conf/4.x
 
   # Add mailhog capturing
   # See: https://docs.devwithlando.io/services/mailhog.html
