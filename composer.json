@@ -33,8 +33,7 @@
     "mikey179/vfsStream": "~1.2",
     "drupal-composer/drupal-scaffold": "^2.0.0",
     "drupal/console": "^1.0.1",
-    "drush/drush": "^9",
-    "kporras07/composer-symlinks": "^0.1.0@dev",
+    "drush/drush": "^8",
     "drupal/core": "8.6.2",
     "drupal/admin_toolbar": "1.18",
     "drupal/ctools": "3.0",
@@ -59,11 +58,9 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "@composer drupal-scaffold",
-      "@composer links"
+      "@composer drupal-scaffold"
     ],
-    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-    "links": "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
   },
   "extra": {
     "enable-patching": true,
