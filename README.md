@@ -8,7 +8,7 @@
 ########################################
 ```
 
-[![Build Status](https://travis-ci.org/sgrichards/drupal-startup.svg?branch=develop)](https://travis-ci.org/sgrichards/drupal-startup)
+[ ![Codeship Status for sgrichards/drupal-startup](https://app.codeship.com/projects/c1e6f9f0-bdb5-0136-09c5-5eb317ea9055/status?branch=develop)](https://app.codeship.com/projects/312923)
 
 # Drupal 8 / Lando flavoured project startup
 
