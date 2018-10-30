@@ -2,8 +2,8 @@ default:
   suites:
     default:
       contexts:
-        - Drupal\DrupalExtension\Context\DrupalContext
-        - Drupal\DrupalExtension\Context\MinkContext
+      - Drupal\DrupalExtension\Context\DrupalContext
+      - Drupal\DrupalExtension\Context\MinkContext
   extensions:
     Behat\MinkExtension:
       goutte: ~
@@ -13,3 +13,11 @@ default:
       api_driver: 'drupal'
       drupal:
         drupal_root: 'docroot'
+codeship:
+  suites:
+    default:
+      filters:
+        tags: ~@ignore-on-codeship
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://127.0.0.1:8000

@@ -1,0 +1,67 @@
+name: Startup
+type: profile
+description: 'Base install profile'
+core: 8.x
+
+distribution:
+  name: Startup
+
+dependencies:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - ape
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor
+  - config
+  - ctools
+  - contextual
+  - datetime
+  - dynamic_page_cache
+  - editor
+  - embed
+  - entity
+  - entity_browser
+  - entity_browser_entity_form
+  - entity_embed
+  - environment_indicator
+  - field
+  - field_group
+  - file
+  - filter
+  - image
+  - inline_entity_form
+  - link
+  - linkit
+  - menu_ui
+  - menu_link_content
+  - metatag
+  - node
+  - options
+  - page_cache
+  - path
+  - redirect
+  - redis
+  - system
+  - syslog
+  - taxonomy
+  - text
+  - token
+  - ultimate_cron
+  - update
+  - user
+  - pathauto
+  - xmlsitemap
+  - views
+  - help
+  # optional
+  - stage_file_proxy
+  - devel
+  - kint
+  - field_ui
+  - views_ui
+  - dblog
+themes:
+  - bartik
+  - seven

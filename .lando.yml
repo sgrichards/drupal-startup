@@ -16,8 +16,7 @@ services:
 
   appserver:
     build:
-      - "echo wait for database && sleep 15"
-      - "cd $LANDO_MOUNT && composer install && composer run-script links"
+      - cd $LANDO_MOUNT && composer install && composer run-script links
 
 #  cache:
 #    type: memcached
@@ -32,7 +31,7 @@ services:
 #  search:
 #    type: solr:4.10
 #    config:
-#      conf: conf/solr4
+#      conf: conf/solr/solr-conf/4.x
 
   # Add mailhog capturing
   # See: https://docs.devwithlando.io/services/mailhog.html
@@ -53,7 +52,7 @@ tooling:
   install:
     descripion: Install/Re-install Site
     service: appserver
-    cmd: ./scripts/development/install.sh
+    cmd: ./scripts/install.sh
 
   refresh:
     descripion: Refresh (composer install, reload config, clear cache, etc.)
@@ -64,11 +63,6 @@ tooling:
     description: Reset repo (remove generated files).
     service: appserver
     cmd: ./scripts/development/reset.sh
-
-  restoredb:
-    descripion: Restore the post-install database state
-    service: appserver
-    cmd: ./bin/drupal database:restore --file=../assets/post-install.sql
 
   phpcs:
     description: Run PHP Code Sniffer

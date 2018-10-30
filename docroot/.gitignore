@@ -1,0 +1,23 @@
+# Ignore Core and contrib code.
+core
+*/contrib
+
+# Ignore dotfiles (except .htaccess && .gitignore)
+/.*
+!/.gitignore
+!/.htaccess
+
+# Ignore scaffolded files
+/*.php
+robots.txt
+web.config
+
+# Ignore files
+sites/*/files
+
+# Ignore default, example and local config.
+sites/*/default.*
+sites/example.*
+sites/development.*
+sites/*/settings.local.php
+*.sqlite

@@ -10,7 +10,7 @@
     <testsuites>
         <testsuite name="drupal-startup tests">
             <directory>./test/</directory>
-            <directory>./src/modules</directory>
+            <directory>./docroot/modules/custom</directory>
         </testsuite>
     </testsuites>
 
