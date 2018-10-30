@@ -20,3 +20,4 @@ sites/*/default.*
 sites/example.*
 sites/development.*
 sites/*/settings.local.php
+*.sqlite

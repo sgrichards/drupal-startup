@@ -2,14 +2,14 @@
 <ruleset name="Startup">
   <description>Drupal Coding Standards</description>
 
-  <file>./src/modules</file>
-  <file>./src/themes</file>
-  <file>./src/profiles</file>
+  <file>./docroot/modules/custom</file>
+  <file>./docroot/themes/custom</file>
+  <file>./docroot/profiles/custom</file>
   <arg name="extensions" value="inc,install,module,php,profile,test,theme,yml"/>
 
   <!--Exclude third party code.-->
-  <exclude-pattern>./src/sites/*</exclude-pattern>
-  <exclude-pattern>./src/themes/*\.(?!theme$)</exclude-pattern>
+  <exclude-pattern>./docroot/sites/*</exclude-pattern>
+  <exclude-pattern>./docroot/themes/custom/*\.(?!theme$)</exclude-pattern>
 
   <arg name="colors" />
   <arg value="np"/>
