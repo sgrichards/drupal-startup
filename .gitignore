@@ -1,19 +1,12 @@
 # Ignore binaries.
 bin
 
-# Ignore Drupal-managed dependencies.
-docroot
-src/sites/*/settings.local.php
-src/sites/*/files
-
 # Ignore Composer-managed dependencies.
 vendor/
 
-# Ignore lock file.
+# Ignore lock file...
+# note: remove this on deployed projects!!
 composer.lock
 
-# System.
+# System
 .idea
-
-# Build assets
-assets

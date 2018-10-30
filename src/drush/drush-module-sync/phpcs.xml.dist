@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ruleset name="Coding Standards">
-<file>./src</file>
-<rule ref="./vendor/drupal/coder/coder_sniffer/Drupal"/>
-</ruleset>

@@ -297,7 +297,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'BRSDEJMkKfPyEGg6aDASbOFX9J0aCyEnl91zYQ44tlOY2h13QLxC5QbZhxy1kE3nrKb-ks9lpA';
 
 /**
  * Deployment identifier.
@@ -771,6 +771,10 @@ $settings['file_scan_ignore_directories'] = [
  */
 $settings['entity_update_batch_size'] = 50;
 
+// Note: If you're on Acquia, then this will also need re-including after the
+// settings file include snippet, as they declare it in there as well.
+$config_directories['sync'] = '../config/sync';
+
 /**
  * Load local development override configuration, if available.
  *
@@ -781,7 +785,6 @@ $settings['entity_update_batch_size'] = 50;
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
