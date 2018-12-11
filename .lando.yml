@@ -3,7 +3,7 @@ name: drupal8-startup
 # Configure the Drupal8 recipe
 recipe: drupal8
 config:
-  php: '7.1'
+  php: '7.2'
   via: nginx
   webroot: docroot
   drush: composer
@@ -16,8 +16,9 @@ services:
 
   appserver:
     build:
-      - cd $LANDO_MOUNT && composer install && composer run-script links
+      - cd $LANDO_MOUNT && composer install
 
+#  Optional - for Acquia hosting.
 #  cache:
 #    type: memcached
 #    mem: 128
@@ -26,12 +27,20 @@ services:
     type: redis
     persist: true
 
-  # Add an indexing backend
-  # See: https://docs.devwithlando.io/services/solr.html
+# Add an indexing backend
+# See: https://docs.devwithlando.io/services/solr.html
+
+# Acquia currently only supports 4.10
 #  search:
 #    type: solr:4.10
 #    config:
-#      conf: conf/solr/solr-conf/4.x
+#      conf: "docroot/modules/contrib/search_api_solr/solr-conf/4.x"
+
+# Platform.sh supports up to 6.6
+#  search:
+#    type: solr:6.6
+#    config:
+#      conf: conf/solr/solr-conf/6.x
 
   # Add mailhog capturing
   # See: https://docs.devwithlando.io/services/mailhog.html
