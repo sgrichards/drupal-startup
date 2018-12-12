@@ -1,5 +1,57 @@
 name: Startup Core
-description: 'Base module for global mods and tests.'
+description: 'Base module for core dependencies, global mods, config and tests.'
 type: module
 core: 8.x
 package: Startup
+
+dependencies:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor
+  - config
+  - ctools
+  - contextual
+  - datetime
+  - dynamic_page_cache
+  - editor
+  - environment_indicator
+  - field
+  - field_group
+  - file
+  - filter
+  - image
+  - inline_entity_form
+  - link
+  - linkit
+  - menu_ui
+  - menu_link_content
+  - metatag
+  - node
+  - options
+  - page_cache
+  - path
+  - redirect
+  - system
+  - syslog
+  - taxonomy
+  - text
+  - token
+  - ultimate_cron
+  - update
+  - user
+  - pathauto
+  - views
+  - help
+  # optional
+  - stage_file_proxy
+  - devel
+  - kint
+  - field_ui
+  - views_ui
+  - dblog
+themes:
+  - bartik
+  - seven
