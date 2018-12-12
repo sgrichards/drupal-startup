@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Install hooks.
+ */
+
+/**
+ * Install the startup themes.
+ */
+function startup_core_install() {
+
+  $installer = \Drupal::service('theme_installer');
+  $installer->install(['seven', 'bartik']);
+
+  // Set frontend theme.
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'bartik')
+    ->save(TRUE);
+}
