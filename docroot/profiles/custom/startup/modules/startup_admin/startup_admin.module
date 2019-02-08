@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_toolbar_alter
+ */
+function startup_admin_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'startup_admin/admin';
+}

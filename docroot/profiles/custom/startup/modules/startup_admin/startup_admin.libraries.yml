@@ -1,0 +1,8 @@
+admin:
+  css:
+    theme:
+      css/toolbar.css: {}
+form:
+  css:
+    theme:
+      css/settings_form.css: {}

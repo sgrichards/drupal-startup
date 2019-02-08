@@ -1,0 +1,5 @@
+name: Startup admin settings
+description: This module exposes a number of hooks to allow other modules to define custom site settings.
+core: 8.x
+type: module
+package: Startup
