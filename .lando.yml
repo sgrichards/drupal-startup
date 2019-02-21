@@ -40,7 +40,7 @@ services:
 #  search:
 #    type: solr:6.6
 #    config:
-#      conf: conf/solr/solr-conf/6.x
+#      conf: "docroot/modules/contrib/search_api_solr/solr-conf/6.x
 
   # Add mailhog capturing
   # See: https://docs.devwithlando.io/services/mailhog.html

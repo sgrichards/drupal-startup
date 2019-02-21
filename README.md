@@ -8,7 +8,7 @@
 ########################################
 ```
 
-[ ![Codeship Status for sgrichards/drupal-startup](https://app.codeship.com/projects/c1e6f9f0-bdb5-0136-09c5-5eb317ea9055/status?branch=develop)](https://app.codeship.com/projects/312923)
+[![Codeship Status for inviqa/drupal-startup](https://app.codeship.com/projects/0e9dd740-1689-0137-368c-02228243811b/status?branch=develop)](https://app.codeship.com/projects/327924)
 
 # Drupal 8 / Lando flavoured project template
 
