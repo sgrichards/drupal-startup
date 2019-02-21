@@ -6,9 +6,11 @@ config:
   php: '7.2'
   via: nginx
   webroot: docroot
-  drush: composer
   database: mariadb:10.1
   xdebug: true
+
+env_file:
+  - .env
 
 # Service overrides and augments
 # See: https://docs.devwithlando.io/config/services.html
@@ -53,7 +55,7 @@ services:
 proxy:
   mailhog:
     - mail.startup.lndo.site
-  nginx:
+  appserver_nginx:
     - www.startup.lndo.site
 
 # Development tools
