@@ -65,6 +65,8 @@ newproject
 1. Install Docker-for-mac
 2. Install [Lando](https://docs.devwithlando.io/installation/installing.html).
 
+**Note: Compatible with v3.0.0-rc1 and below**
+
 ### Setup
 
 Run `lando start` from within the project directory.
