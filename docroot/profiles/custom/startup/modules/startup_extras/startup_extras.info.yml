@@ -1,0 +1,4 @@
+name: Startup Extras
+description: Additional functionality applied at install
+core: 8.x
+type: module
