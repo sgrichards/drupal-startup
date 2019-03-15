@@ -1,9 +1,9 @@
 ```
- ____ _____  _    ____ _____ _   _ ____  
-/ ___|_   _|/ \  |  _ \_   _| | | |  _ \ 
+ ____ _____  _    ____ _____ _   _ ____
+/ ___|_   _|/ \  |  _ \_   _| | | |  _ \
 \___ \ | | / _ \ | |_) || | | | | | |_) |
- ___) || |/ ___ \|  _ < | | | |_| |  __/ 
-|____/ |_/_/   \_\_| \_\|_|  \___/|_|    
+ ___) || |/ ___ \|  _ < | | | |_| |  __/
+|____/ |_/_/   \_\_| \_\|_|  \___/|_|
 
 ########################################
 ```
@@ -36,7 +36,7 @@ newproject
 ├── config
 |   └── sync # Drupal config files
 |
-├── doc # Project related documentation 
+├── doc # Project related documentation
 |
 ├── docroot
 |   ├── modules
@@ -45,7 +45,7 @@ newproject
 |   |   └── custom # Custom install profiles
 |   ├── sites
 |   |   └── default # Default site settings
-|   └── themes 
+|   └── themes
 |       └── custom # Custom themes
 |
 ├── scripts
@@ -55,7 +55,7 @@ newproject
 |
 └── test
     └── behat # Behat tests
-``` 
+```
 
 
 ## Development Environment
@@ -84,5 +84,6 @@ Run `lando start` from within the project directory.
 |`lando phpunit`                                |Run phpunit tests _see ./phpunit.xml.dist for scope_     |
 |`lando behat`                                  |Run behat test suite                                     |
 |`lando test`                                   |Run all tests and code evaluation                        |
+|`lando npm`                                    |Run NPM commands                                         |
 
 For further lando related commands see: https://docs.devwithlando.io/config/tooling.html

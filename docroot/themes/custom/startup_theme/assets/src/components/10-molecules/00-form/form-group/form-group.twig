@@ -1,0 +1,11 @@
+<div class="form-group">
+  {% block label %}
+    <label for="textEl">Form element label</label>
+  {% endblock %}
+  {% block input %}
+    <input type="text" name="textEl" id="textEl" />
+  {% endblock %}
+  {% if description %}
+    {% include '@description' with { 'text': description } %}
+  {% endif %}
+</div>

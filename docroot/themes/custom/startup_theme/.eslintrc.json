@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "extends": "airbnb-base",
+  "plugins": ["jest"],
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "globals": {
+    "Drupal": true,
+    "drupalSettings": true,
+    "drupalTranslations": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": false,
+    "import/prefer-default-export": false,
+    "import/no-default-export": ["warn"]
+  }
+}

@@ -1,0 +1,21 @@
+name: STARTUP THEME
+description: Please change me
+core: 8.x
+type: theme
+base theme: stable
+
+libraries:
+  - startup_theme/global
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Left sidebar'
+  sidebar_second: 'Right sidebar'
+  bottom: 'Bottom'
+  footer: 'Footer'

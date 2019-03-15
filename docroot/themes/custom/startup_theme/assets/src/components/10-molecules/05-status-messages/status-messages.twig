@@ -1,0 +1,13 @@
+<div role="contentinfo" class="{{ modifiers('messages', type)}}">
+  {% if type == 'error' %}
+    <div role="alert">
+  {% endif %}
+  <ul class="messages__list">
+    {% for message in messages %}
+      <li class="messages__item">{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% if type == 'error' %}
+    </div>
+  {% endif %}
+</div>

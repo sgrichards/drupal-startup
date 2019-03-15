@@ -49,12 +49,24 @@ services:
     hogfrom:
       - appserver
 
+  node:
+    type: node
+    globals:
+      gulp: latest
+      gulp-cli: latest
+    # Replace this with your theme path after it's been generated.
+    # build:
+    #   - cd /app/docroot/themes/custom/startup_theme && npm install
+    ports: [3000:3000]
+
 # Additional mailhog proxy settings so we get a nice URL for the mailhog ui
 proxy:
   mailhog:
     - mail.startup.lndo.site
   nginx:
     - www.startup.lndo.site
+  node:
+    - fractal.lndo.site:3000
 
 # Development tools
 tooling:
@@ -95,3 +107,7 @@ tooling:
     description: Run all tests
     service: appserver
     cmd: ./scripts/development/tests.sh
+
+  npm:
+    service: node
+    cmd: npm

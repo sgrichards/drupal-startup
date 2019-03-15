@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Functions to support the theme.
+ */
+
+// Recursively load all files under the hooks directory.
+$directory = new RecursiveDirectoryIterator(__DIR__ . DIRECTORY_SEPARATOR . 'hooks' . DIRECTORY_SEPARATOR);
+$recIterator = new RecursiveIteratorIterator($directory);
+$regex = new RegexIterator($recIterator, '/\.(inc|php)$/i');
+
+foreach ($regex as $item) {
+  include $item->getPathname();
+}
