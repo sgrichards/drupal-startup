@@ -7,44 +7,69 @@ package: Startup
 dependencies:
   - admin_toolbar
   - admin_toolbar_tools
+  - automated_cron
   - block
   - block_content
   - breakpoint
   - ckeditor
+  - color
+  - comment
   - config
-  - ctools
+  - contact
   - contextual
+  - ctools
   - datetime
+  - dblog
   - dynamic_page_cache
   - editor
   - environment_indicator
   - field
   - field_group
+  - field_ui
   - file
   - filter
+  - help
+  - history
   - image
   - inline_entity_form
   - link
   - linkit
-  - menu_ui
+  - media
+  - media_library
   - menu_link_content
+  - menu_ui
   - metatag
   - node
   - options
   - page_cache
   - path
+  - pathauto
+  - quickedit
+  - rdf
   - redirect
-  - system
+  - search
+  - shortcut
   - syslog
+  - system
   - taxonomy
   - text
   - token
+  - toolbar
+  - tour
   - ultimate_cron
   - update
   - user
-  - pathauto
   - views
-  - help
+  # Site Studio
+  - cohesion
+  - cohesion_base_styles
+  - cohesion_breakpoint_indicator
+  - cohesion_custom_styles
+  - cohesion_elements
+  - cohesion_style_guide
+  - cohesion_sync
+  - cohesion_templates
+  - cohesion_website_settings
   # optional
   - stage_file_proxy
   - devel
