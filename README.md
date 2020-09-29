@@ -10,7 +10,7 @@
 
 [ ![Codeship Status for sgrichards/drupal-startup](https://app.codeship.com/projects/c1e6f9f0-bdb5-0136-09c5-5eb317ea9055/status?branch=develop)](https://app.codeship.com/projects/312923)
 
-# Drupal 8 / Docker flavoured project template
+# Drupal 8 / lando flavoured project template
 
 This project should be used as a skeleton starting point for new Drupal 8 based projects. As such some assumptions
 and opinionated decisions are included to bootstrap a project with everything you might need to get started!
