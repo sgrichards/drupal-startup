@@ -1,0 +1,4 @@
+services:
+  startup_admin.service:
+    class: \Drupal\startup_admin\StartupAdminSettingsService
+    arguments: ['@config.factory']

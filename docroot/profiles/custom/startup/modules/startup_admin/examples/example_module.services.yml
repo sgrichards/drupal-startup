@@ -1,0 +1,4 @@
+example_module.subscriber:
+  class: Drupal\example_module\EventSubscriber\ExampleEventSubscriber
+  tags:
+    - { name: 'event_subscriber' }

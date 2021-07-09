@@ -1,0 +1,11 @@
+.adminimal-admin-toolbar .toolbar-icon-startup-admin-settings:before {
+  background-image: url('../img/settings-work-tool.svg');
+}
+
+.adminimal-admin-toolbar .toolbar-icon-startup-admin-settings:hover:before {
+  background-image: url('../img/settings-work-tool-white.svg');
+}
+
+.adminimal-admin-toolbar .toolbar-icon-startup-admin-settings:hover {
+  color: #fff !important;
+}

@@ -1,0 +1,7 @@
+startup_admin.settings_form:
+  path: '/admin/settings'
+  defaults:
+    _form: '\Drupal\startup_admin\Form\StartupAdminSettingsForm'
+    _title: 'Site settings'
+  requirements:
+    _permission: 'startup admin administer settings'

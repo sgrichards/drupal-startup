@@ -1,0 +1,6 @@
+startup_admin.settings:
+  title: 'Site settings'
+  description: 'Set and configure addition site settings.'
+  parent: system.admin
+  route_name: startup_admin.settings_form
+  weight: 20

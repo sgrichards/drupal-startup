@@ -1,0 +1,19 @@
+.language-switch-title {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+ul.language-switch {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+ul.language-switch li {
+  display: inline;
+  margin-right: 10px;
+  list-style: none;
+}
+
+ul.language-switch li.active {
+  text-decoration: underline;
+}
